@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.profile {
+  border: 1px solid;
+}
+ul {
+  width: 75%;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 15%;
+  list-style: none;
+  border: 1px solid;
+  border-radius: 10%;
+}
+a {
+  padding: 1%;
+  color:rgb(155, 149, 149);
+  text-decoration: none;
+  font-weight: 700;
+}
+@keyframes Link {
+  100% {
+    background-color: antiquewhite;
+  }
+}
+a:hover{
+  animation-name: Link;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
