@@ -1,6 +1,12 @@
 import React from "react";
 import Nav from'./nav';
 import Account from './profile'
+import Image from './images/frp-landing.webp';
+import About from './landing/about';
+import How from './landing/howworks';
+import Involved from './landing/involved';
+import Who from './landing/who';
+import Story from './landing/story';
 const Main = () => {
 let profile = {
     name: "105 Gibson Community Center",
@@ -14,9 +20,14 @@ let profile = {
 }
 let foods = ['Apple', 'Chicken', 'Meat']
     return (
-        <div>
-            <h1>Hi</h1>
+        <div id="landing">
+           
             <Nav/>
+            <About/>
+            <How />
+            <Who />
+            <Story />
+            <Involved />
             <Account profile={profile} foods={foods}/>
         </div>
 

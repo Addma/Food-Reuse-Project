@@ -3,31 +3,279 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 .profile {
   border: 1px solid;
+}
+#landing {
+  display:flex;
+  flex-direction: column;
+  gap: 50vh;
 }
 ul {
   width: 75%;
   display: inline-flex;
   justify-content: flex-end;
-  gap: 15%;
+  gap: 5%;
   list-style: none;
-  border: 1px solid;
   border-radius: 10%;
 }
-a {
-  padding: 1%;
-  color:rgb(155, 149, 149);
-  text-decoration: none;
-  font-weight: 700;
+#landing {
+  width: 100%;
+  height: 300%;
 }
-@keyframes Link {
+nav > a {
+  text-align: center;
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+nav > a:hover{
+  font-weight: 700;
+  color:green;
+}
+#landing-text {
+  margin:auto;
+  align-self:center;
+  justify-self: flex-end;
+  color: whitesmoke;
+  text-align: center;
+}
+#landing-text button {
+  animation-name: JoinHoverOut;
+  animation-duration: .25;
+  animation-iteration-count: 1;
+  width: 10vw;
+  padding: 1%;
+  background:none;
+  color: black;
+  cursor:pointer;
+  border: 3px solid black;
+  font-size: 1vw;
+  text-overflow: clip;
+  overflow:hidden;
+  white-space: nowrap;
+}
+@keyframes JoinHover {
   100% {
-    background-color: antiquewhite;
+  background-color: white;
+  color: black;
   }
 }
-a:hover{
-  animation-name: Link;
+@keyframes JoinHoverOut {
+  from {
+  background-color: white;
+  color: black;
+  }
+  to {
+  }
+}
+#landing-text button:hover{
+  animation-name: JoinHover;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+#landing-text h1 {
+  font-size:7vw;
+}
+#landing-text h2 {
+  font-size: 3vw;
+  padding: 2%;
+}
+nav {
+  gap: 5vw;
+  list-style: none;
+  text-decoration: none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+#frp {
+  width: 100%;
+  height: 100%;
+}
+#logo {
+  height: 5vw;
+  width: 5vw;
+}
+.asd {
+  background-image: url('./images/frp-landing.webp');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size:cover;
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  border-radius: 0 0 5% 5%;
+}
+#navbar {
+  background-color: rgba(250, 235, 215, 0.479);
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#about-frp {
+  border-radius: 5%;
+  border-color: black;
+  border: 1px solid;
+  color: black;
+  text-align: center;
+  width: 80%;
+  margin:auto;
+  text-decoration: none;
+}
+#about-frp > h1 {
+  padding-top: 50px;
+}
+#about-frp > h2 {
+  align-self:center;
+}
+#about-frp a {
+  text-decoration: none;
+  color: red;
+}
+#about-frp a:hover {
+  text-decoration: double;
+}
+.how-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+#work-frp {
+  text-align: center;
+  color: black;
+  margin: auto;
+  width: 100%;
+  border-radius: 10%;
+  height: 100vh;
+  border: 3px solid;
+}
+#involved-frp {
+  text-align: center;
+}
+
+.how-info {
+  text-align: left;
+  width: 35%;
+  height: 50%;
+  white-space:pre-line;
+  font-size: 1vw;
+}
+.how-info2 {
+  width: 30%;
+  text-align:left;
+  height: 75%;
+  display:flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.how-img1, .how-img2 {
+  height: 27.5vh;
+  padding:2%;
+  background-color: #F5EE37;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.how-img2 {
+  background-color: #6DCA4C;
+  margin-top: 10px;
+}
+.how-info2 p {
+  font-size: 1vw;
+}
+.how-info2::after{
+  content:'';
+  position: absolute;
+  background-color: #f5ef37;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: -1;
+  top: 250%;
+  left: 80%;
+  overflow:hidden;
+}
+
+#how-mid {
+  width: 30%;
+  height: 100%;
+}
+.how-img1 img, .how-img2 img {
+  width: 95%;
+  height: 95%;
+  margin:auto;
+}
+.how-info2 > a {
+  padding: 2.5%;
+  color: black;
+  text-decoration: none;
+  margin: auto;
+  background-color: none;
+  border: 1.5px solid;
+}
+#story-land {
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+}
+.story {
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+#who-frp {
+  width: 100%;
+  height: 100vh;
+}
+.who-info {
+  display:flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.who-img {
+  width: 50%;
+  background-color: black;
+  border-radius:50%;
+}
+.who-partner {
+  padding: .5%;
+  text-align: center;
+  width: 80%;
+  height: 20%;
+  background-color: #6eca4c91;
+  margin: auto;
+}
+.who-flex {
+  display:flex;
+  height: 80%;
+}
+.who-york {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url('./images/york.png'), black;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:contain
+}
+.who-flex2 {
+  display:flex;
 }
