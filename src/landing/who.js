@@ -2,8 +2,17 @@ import React from "react";
 import Nav from '../nav';
 import BG from '../help';
 import York from '../images/york.png';
-const About = () => {
+import C4 from '../images/frp-c4.png';
+import IBM from '../images/ibm.png';
+import CCLA from '../images/CCLA.png';
+import {useEffect, useState} from 'react';
 
+const About = () => {
+    const [size, setSize] = useState({});
+
+    useEffect(() => {
+        setSize({height: document.querySelector('.who-img').clientWidth})
+    }, [])
 return (
     <div id="who-frp">
         <div className="who-flex">
@@ -13,23 +22,20 @@ return (
                 To help solve these problems, C4 partnered with IBM and CCLA. </p>
             <p>The group is composed of the members Adam Araujo, Seung Hyun Kim, Ahmed, Sathini De Silva, Jaishri, Sonya, Colin, Honey, Ayesha, Soo and Umar. </p>
         </div>
-        <div className="who-img">
+        <div className="who-img" style={size}>
             <img src="" alt=""/>
         </div>
         </div>
     <div className="who-partner">
-        <div id="who-flex2">
-                    <h2>Partnered with:</h2>
-        <div className="who-imgs">
-            <div className="who-york"></div>
-                        <div className="who-york"></div>
-
-            <div className="who-york"></div>
-
-            <div className="who-york"></div>
+        <div>
+            <h1>Partnered with:</h1>
         </div>
+        <div className="who-partner-imgs">
+        <div style={{backgroundImage: `url(${York})`}}></div>
+        <div style={{backgroundImage: `url(${C4})`}}></div>
+        <div style={{backgroundImage: `url(${IBM})`}}></div>
+        <div style={{backgroundImage: `url(${CCLA})`}}></div>
         </div>
-
     </div>
     </div>
 )
